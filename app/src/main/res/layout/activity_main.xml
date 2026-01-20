@@ -1,38 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@color/dark_black">
 
     <TextView
+        android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="剪贴板清空工具"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_marginBottom="40dp" />
 
-    <!-- 应用打开时清除开关 -->
+    <!-- 主题开关 -->
     <LinearLayout
+        android:id="@+id/container_theme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingVertical="12dp">
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/bg_switch_container"
+        android:layout_marginBottom="12dp">
 
         <TextView
+            android:id="@+id/text_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="暗黑模式"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+        <Switch
+        android:id="@+id/switch_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- 应用打开时清除开关 -->
+    <LinearLayout
+        android:id="@+id/container_auto_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/bg_switch_container"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/text_auto_clear"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="应用打开时清除"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/white" />
         <Switch
         android:id="@+id/switch_auto_clear"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="18dp" />
+        android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -50,7 +86,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="清除后回到桌面"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/white" />
 
         <Switch
         android:id="@+id/switch_go_home"
@@ -60,15 +97,27 @@
 
     </LinearLayout>
 
-    <!-- 清空剪贴板按钮 -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 清空剪贴板按钮 - 大圆形绿色渐变 -->
     <Button
         android:id="@+id/btn_clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="立即清空剪贴板"
-        android:textSize="16sp"
-        android:paddingHorizontal="32dp"
-        android:paddingVertical="16dp"
-        android:layout_marginTop="40dp" />
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:text="清空"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_clear_button"
+        android:layout_marginBottom="60dp"
+        android:elevation="8dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

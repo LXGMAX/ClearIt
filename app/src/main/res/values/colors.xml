@@ -13,4 +13,16 @@
     <color name="surface">#FFFFFFFF</color>
     <color name="on_surface">#FF1A1A1A</color>
     <color name="outline">#FF79747E</color>
+
+    <!-- 亮色主题 -->
+    <color name="light_background">#FFF5F5F5</color>
+    <color name="light_text">#FF1A1A1A</color>
+    <color name="light_card_bg">#33000000</color>
+
+    <!-- 深黑色背景和绿色渐变 -->
+    <color name="dark_black">#FF0A0A0A</color>
+    <color name="green_start">#FF00E676</color>
+    <color name="green_end">#FF00C853</color>
+    <color name="switch_thumb_on">#FF00E676</color>
+    <color name="switch_track_on">#8800E676</color>
 </resources>
