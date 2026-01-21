@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 深黑色基础背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0A0A0A" />
+        </shape>
+    </item>
+
+    <!-- 红色圆 - 左上角 (模拟模糊: 使用径向渐变) -->
+    <item
+        android:width="600dp"
+        android:height="600dp"
+        android:gravity="top|start"
+        android:left="-200dp"
+        android:top="-200dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="300dp"
+                android:startColor="#E6FF6B4C"
+                android:endColor="#00FF6B4C"
+                android:centerX="0.5"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+
+    <!-- 黄色圆 - 中间 (模拟模糊) -->
+    <item
+        android:width="500dp"
+        android:height="500dp"
+        android:gravity="center">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="250dp"
+                android:startColor="#E6FFD700"
+                android:endColor="#00FFD700"
+                android:centerX="0.5"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+
+    <!-- 蓝色圆 - 右下角 (模拟模糊) -->
+    <item
+        android:width="550dp"
+        android:height="550dp"
+        android:gravity="bottom|end"
+        android:right="-150dp"
+        android:bottom="-150dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="275dp"
+                android:startColor="#E64B7BFF"
+                android:endColor="#004B7BFF"
+                android:centerX="0.5"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+
+    <!-- 70% 透明度的白色覆盖层 (模拟磨砂感: 实际上是提亮并统一色调)
+         这里解释为 30% 不透明度 (#4D)，因为 70% 不透明度 (#B3) 会太白看不见颜色 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#4DFFFFFF" />
+        </shape>
+    </item>
+</layer-list>

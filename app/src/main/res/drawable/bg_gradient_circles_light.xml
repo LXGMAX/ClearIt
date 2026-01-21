@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 浅灰色基础背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFF5F5F5" />
+        </shape>
+    </item>
+
+    <!-- 红色圆 - 左上角 (模拟模糊) -->
+    <item
+        android:width="600dp"
+        android:height="600dp"
+        android:gravity="top|start"
+        android:left="-200dp"
+        android:top="-200dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="300dp"
+                android:startColor="#E6FF6B4C"
+                android:endColor="#00FF6B4C"
+                android:centerX="0.5"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+
+    <!-- 黄色圆 - 中间 (模拟模糊) -->
+    <item
+        android:width="500dp"
+        android:height="500dp"
+        android:gravity="center">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="250dp"
+                android:startColor="#E6FFD700"
+                android:endColor="#00FFD700"
+                android:centerX="0.5"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+
+    <!-- 蓝色圆 - 右下角 (模拟模糊) -->
+    <item
+        android:width="550dp"
+        android:height="550dp"
+        android:gravity="bottom|end"
+        android:right="-150dp"
+        android:bottom="-150dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="275dp"
+                android:startColor="#E64B7BFF"
+                android:endColor="#004B7BFF"
+                android:centerX="0.5"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+
+    <!-- 半透明白色覆盖层 (在亮色模式下可以是更透明或更不透明，稍微增加白度) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#80FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

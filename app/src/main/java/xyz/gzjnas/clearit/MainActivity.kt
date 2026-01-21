@@ -120,9 +120,9 @@ class MainActivity : ComponentActivity() {
     private fun applyTheme() {
         val isDark = switchTheme.isChecked
 
-        // 更新背景色
-        rootLayout.setBackgroundColor(
-            ContextCompat.getColor(this, if (isDark) R.color.dark_black else R.color.light_background)
+        // 更新背景图
+        rootLayout.setBackgroundResource(
+            if (isDark) R.drawable.bg_gradient_circles else R.drawable.bg_gradient_circles_light
         )
 
         // 更新文字颜色
